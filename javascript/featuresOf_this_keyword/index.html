@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    <script>
+        // (1)
+        //if 'this' is print in a global scope
+        //‘this’ keyword refers to the window object
+        console.log("printing this in a global scope",this);
+
+        //demo() is being called in the global scope
+        //the value of ‘this’ inside demo() becomes the window object.
+        function demo(){
+            this.name="neha";
+            console.log(this);
+        }
+
+        demo();
+         // (2)
+        //if the function being called by new keyword
+        //the value of ‘this’ inside demo() becomes a reference to a
+        //newly created object which contains the function object. 
+        new demo();
+        
+        // (3)
+        //printName() is being called in the global scope. But it is called using the demoObject object.
+        //the value of ‘this’ inside printName() becomes the demoObject itself.
+        var demoObject = {
+            firstName:'Neha',
+            lastName:'Singh',
+            printName:function(){
+                console.log(this);
+            }
+        }
+
+        demoObject.printName();
+        
+        // (4)
+        //demoObject.printName is NOT calling the function, but it only
+        //contains a reference to the function. This reference is stored inside
+        //globalDemoFunction. Now globalDemoFunction is being called in the
+        //global scope, hence the value of ‘this’ inside this function is the window object
+       var globalDemoFunction = demoObject.printName;
+       globalDemoFunction();
+
+       /*
+        Conclusion:
+             Every function while executing has a reference to its current execution
+             context, which can be referenced by 'this'. This execution context gets created
+             when a function is called. Therefore the value of ‘this’ inside a function depends
+             on how and where the function is called.
+
+             Implicit Binding => implicitly decides the value of ‘this’.
+             Explicit Binding => explicitly specifies what the value of ‘this’ will be.
+             New Keyword => ‘this’ takes up the value of a newly created object which refers
+              to another object. This other object refers to the prototype of
+              the function being called.
+             Default binding => when none of the above rules applies, the ‘this’ takes the
+              value of the window objec
+       */
+
+        class Person {
+          constructor(name) {
+            this.name = name;
+          }
+        }
+
+        class Student extends Person{
+            constructor(name,rollNo,className){
+                super(name);
+                this.rollNo = rollNo;
+                this.className = className
+            }
+
+            getDetails(){
+                let arrStudent=[this.name,this.rollNo,this.className];
+                // for(let i=0;i<arrStudent.length;i++){
+                //     console.log(arrStudent[i]);
+                    
+                // }
+
+                return arrStudent;
+                
+            }
+        }
+
+        class Teacher extends Person{
+            constructor(name,teacherID,subject){
+                super(name);
+                this.teacherID = teacherID;
+                this.subject = subject;
+            }
+
+            getDetails(){
+                let arrTeacher=[this.name,this.teacherID,this.subject];
+                // for(let i=0;i<arrTeacher.length;i++){
+                //     console.log(arrTeacher[i]);
+                // }
+
+                return arrTeacher;
+            }
+        }
+
+        var s1=new Student("rohit",1,12);
+        console.log(s1.getDetails());
+        
+        var t1=new Teacher("Rupa",123,"maths");
+        console.log(t1.getDetails());
+
+        var arr= [1,2,-1,undefined,0,7];
+        var newArr = arr.map((e) => {
+            return e * 2;
+          
+        }).filter((e)=> {
+            return e > 0 && e !== 'undefined';
+        })
+
+        console.log("new array",newArr);
+    </script>
+    </body>
+</html>

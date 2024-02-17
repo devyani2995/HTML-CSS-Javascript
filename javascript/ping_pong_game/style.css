@@ -1,0 +1,88 @@
+/* set time duration of root element */
+:root
+{
+    --time-duration:9s;
+}
+
+/* set margin of body element as 0 (because there is some margin by default) */
+body {
+    margin: 0px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar
+{
+    overflow:hidden;
+    display:none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* setting the marging 0 for name of the rod */
+h3
+{
+    margin:0px;
+}
+
+.game-rods{
+    
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 20vw;  
+    height: 5vh;
+    padding:5px;
+    text-align: center;
+    color: white;
+}
+
+/* for rod1  */
+#rod-one {
+    position: absolute;	
+	top: 0%;
+	background-color:#0000FF;
+}
+
+/* for rod2  */
+#rod-two {	
+    position: absolute;
+	bottom: 0%;
+    background-color:#8A2BE2;   
+}
+
+
+#ball {
+	height: 50px;
+    width: 50px;
+    position:absolute;
+    border-radius: 50%;
+    background-image:radial-gradient(red 0%,black 221%);
+    box-sizing: border-box;
+}
+
+/* add animation to the ball  */
+.animate-top-right
+{
+    transition:transform linear var(--time-duration);
+    transform: translateX(2000px) translateY(-2000px);
+}
+.animate-bottom-right
+{
+    transition:transform linear var(--time-duration);
+    transform: translateX(2000px) translateY(2000px);
+}
+.animate-top-left
+{
+    transition:transform linear var(--time-duration);
+    transform: translateX(-2000px) translateY(-2000px);
+}
+.animate-bottom-left
+{
+    transition:transform linear var(--time-duration);
+    transform: translateX(-2000px) translateY(2000px);
+}

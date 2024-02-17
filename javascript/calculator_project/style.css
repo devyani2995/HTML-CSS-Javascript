@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calculator{
+  
+    margin: 20vh auto;
+    width: 56%;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: scale(1.2);
+    padding: 2%;
+    background-color:rgb(226,224,224);
+}
+
+#heading-title{
+    background: black;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 1vh;
+    margin-bottom: 2vh;
+}
+
+/* Display to display the input, result from the users  */
+
+#display {
+    width: 100%;
+    background: rgb(245,245,245);
+    /* min-height: 60px; */
+    height: 75px;
+    color: #3F51B5;
+    font-family: sans-serif;
+    font-size: 2rem;
+    border-radius: 5px;
+    text-align: right;
+    padding: 25px 10px 2px 2px;
+    margin-bottom: 2vh;
+}
+
+/* Buttons like 1, 2 , = ,+ etc. */
+
+.buttons {
+    font-family: sans-serif;
+    height: auto;
+    /* min-height: 48px; */
+    height: 55px;
+    width: 25%;
+    border: 3px solid rgb(226,224,224);
+    border-top: 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s;
+    background-color: white;
+}
+
+.buttons:hover {
+    background-color:rgb(255,200,119);
+}
+
+/* Button with Value 0 has a bigger width */
+
+.buttons[data-value = "0"] {
+    width: 50%;
+}
+
+/* Arithmatic Operators have a separate background color  */
+
+.buttons[data-value = "="] {
+    background-color: rgb(193,68,68);
+    color:rgb(245,245,245);
+    border-right: 0px;
+}
+
+.buttons:nth-child(4n+2) {
+    background-color: rgb(193,68,68);
+    color:rgb(245,245,245);
+    border-right: 0px;
+}
+
+.buttons:nth-child(4n+2):hover, .buttons[data-value = "="]:hover {
+    background-color: rgb(181 16 16 / 55%);;
+}

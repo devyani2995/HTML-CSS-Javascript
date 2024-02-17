@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Animations Example</title>
+	<style type="text/css">
+		div{
+			height: 100px;
+			width: 100px;
+			position: absolute;
+			top: 20%;
+			left: 20%;
+			background-color: red;
+/*			transition: 1s ease-in-out;*/
+            animation: animationEffect 1s ease-in-out infinite alternate;  /*animation-name,animation-duration,animation-timing-function,no. of times that animation run.,alternate is for opposite transition should be smooth as well*/
+		}
+        
+        /*creating animation changeShape*/
+        @keyframes animationEffect{
+        	/*from{
+        		border-radius: 0%;
+        	}
+
+        	to{
+        		border-radius: 50%;
+        	}*/
+
+            /* bounce effect on div*/    
+            from {
+               transform: translateY(-40px);
+            }
+
+            25% {
+               transform: translateY(40px);
+            }
+
+            50% {
+               transform: translateY(-10px);
+            }
+
+            75% {
+               transform: translateY(10px);
+            }
+
+            to {
+               transform: translateY(0px);
+            }
+        }
+
+        p{
+            font-size: bold;
+            text-align: center;
+            background-color: lightgrey;
+            margin: 8%;
+            border: solid black;
+            border-width: 3px 0px 3px 0px;
+            font-size: 3rem;
+            animation: fade 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+
+		/*div:hover{
+			transform: scale(1.5) translate(150px);
+		}*/
+			
+    </style>
+</head>
+<body>
+  <div id="div1"></div>
+  <p>Animation fade in</p>
+</body>
+</html>

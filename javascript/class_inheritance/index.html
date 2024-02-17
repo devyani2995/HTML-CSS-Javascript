@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Class Inheritance</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+     <script>
+        class Person {
+          constructor(name) {
+            this.name = name;
+          }
+        }
+
+        class Student extends Person{
+            constructor(name,rollNo,className){
+                super(name);
+                this.rollNo = rollNo;
+                this.className = className
+            }
+
+            getDetails(){
+                let arrStudent=[this.name,this.rollNo,this.className];
+                // for(let i=0;i<arrStudent.length;i++){
+                //     console.log(arrStudent[i]);
+                    
+                // }
+
+                return arrStudent;
+                
+            }
+        }
+
+        class Teacher extends Person{
+            constructor(name,teacherID,subject){
+                super(name);
+                this.teacherID = teacherID;
+                this.subject = subject;
+            }
+
+            getDetails(){
+                let arrTeacher=[this.name,this.teacherID,this.subject];
+                // for(let i=0;i<arrTeacher.length;i++){
+                //     console.log(arrTeacher[i]);
+                // }
+
+                return arrTeacher;
+            }
+        }
+
+        var s1=new Student("rohit",1,12);
+        console.log(s1.getDetails());
+        
+        var t1=new Teacher("Rupa",123,"maths");
+        console.log(t1.getDetails());
+
+     </script>
+    </body>
+</html>

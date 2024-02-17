@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Toggle Mode</title>
+	<style type="text/css">
+.outer
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height:200px;
+    width:30%;
+    margin:auto;
+    margin-top:10%;
+    text-align:center;
+}
+.inner
+{
+    border: 2px solid black;
+    height: 30px;
+    position: relative;
+    width: 101px;
+    border-radius: 20px;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    padding: 2px;
+}
+.toggler
+{
+    height: 100%;
+    width: 23%;
+    background-color: black;
+    border-radius: inherit;
+    float: left;
+}
+	</style>
+</head>
+<body>
+     <div class="outer">
+        <div class="inner">
+            <div class="toggler">
+                
+            </div>
+        </div>
+        <h1>
+            Click On the Toggle Button
+        </h1>
+    </div>
+
+ <script type="text/javascript">
+ 	 "use strict";
+var count=0;
+document.getElementsByClassName('inner')[0].addEventListener('click', function()
+{
+    if(count%2==0)
+    {
+        document.getElementsByClassName('toggler')[0].style.float="right";
+        document.getElementsByClassName('inner')[0].style.backgroundColor="white";
+        document.getElementsByTagName('body')[0].style.backgroundColor="black";
+        document.getElementsByTagName('h1')[0].style.color="white";
+        count++;
+    }
+    else
+    {
+        document.getElementsByClassName('toggler')[0].style.float="left";
+        document.getElementsByClassName('inner')[0].style.backgroundColor="white";
+        document.getElementsByTagName('body')[0].style.backgroundColor="white";
+        document.getElementsByTagName('h1')[0].style.color="black";
+        count++;
+    }
+});
+ </script>
+</body>
+</html>

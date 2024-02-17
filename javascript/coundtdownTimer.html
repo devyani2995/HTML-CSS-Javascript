@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+   <script type="text/javascript">
+   	  var count=10;
+   	  function countdownTimer(){
+   	  	console.log(count);
+   	  	count--;
+   	  	if(count<0){
+   	  		//stop
+   	  		console.log("Time up!")
+   	  		clearInterval(id);
+   	  	}
+   	  }
+
+   	  var id= setInterval(countdownTimer,1000);
+   </script>
+</body>
+</html>

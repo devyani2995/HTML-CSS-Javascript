@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BootStrap Example</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+       <style type="text/css">
+              #div2{
+                 border: 2px solid red;
+                 background-color: black;
+              }
+
+              #div2{
+                     text-align: center;
+                     margin-top: 5.5rem;
+                     margin-bottom: 5.5rem;
+              }
+
+              #div2 img{
+                     width:20rem;
+                     height:17rem;
+              }
+
+              .mx-4 {
+                     margin-right: 5.5rem!important;
+                     margin-left: 5.5rem!important;
+              }
+              .mt-4 {
+                     margin-top: 4.5rem!important;
+              }
+          
+              @media (min-width: 576px) { 
+                  #div2{
+                              margin-top: 5.5rem !important;
+                              margin-bottom: 5.5rem !important;
+                              margin-right: 22px;
+                  } 
+
+                  #div3 {
+                      margin-top: 5.5rem !important;
+                      margin-bottom: 5.5rem !important;
+                  }   
+              }
+
+              @media screen and (min-width: 768px) { 
+                     .div-card{
+                            max-width:159px;
+                            margin-bottom: 15px;
+                     }
+                     #div2{
+                            margin-left: 5.5rem;
+                            margin-right: 5.5rem;
+                            margin-top: 0rem !important;
+                            margin-bottom: 1rem !important;
+                     }
+                    #div2 img{
+                              width: 88% !important;
+                              height: 19% !important;
+                     }
+
+                     #div3 {
+                      margin-top: 0rem !important;
+                      margin-bottom: 1em !important;
+                     } 
+               }
+
+              @media screen and (min-width:992px){
+                 .div-card{
+                     max-width:298px
+                 }
+
+                 #div2{
+                     margin-left: 5.5rem;
+                     margin-right: 5.5rem;
+                     margin-top: 0rem !important;
+                     margin-bottom: 1rem !important;
+                 }
+
+                 #div2 img{
+                     width: 73% !important;
+                     height: 55% !important;
+                 }  
+
+                 #div3 {
+                      margin-top: 0rem !important;
+                      margin-bottom: 1rem !important;
+                 }   
+              }
+  
+       </style>
+</head>
+<body>
+
+         <h1 class="text-center mt-4" style="color: darkgray;">Play with Bootstrap</h1>  
+    <div  class="container-fluid d-md-flex flex-md-row d-lg-flex flex-lg-row mt-4 justify-content-center">  
+         <div id="div1" class="p-4 div-card row-sm" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <div><p class="text-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets</p></div>
+         </div>
+         <div class="d-sm-flex flex-sm-row justify-content-sm-between">
+            <div id="div2" class="div-card">
+              <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png"/>
+              <p class="text-white-50">Codezen</p>
+            </div>
+            <div id="div3" class="p-4 div-card div-card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <p class="text-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> 
+           </div>
+       </div>
+
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

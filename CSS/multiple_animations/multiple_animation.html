@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Multiple Animations</title>
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+	<style type="text/css">
+/*		div{
+			height: 200px;
+			width: 200px;
+			position: absolute;
+			top: 40%;
+			left: 40%;
+            background-color: aquamarine;
+            animation-name: changeShape,rotate,reduceSize;
+            animation-duration: 1s,1s,1s;
+            animation-iteration-count: infinite,infinite,infinite;
+            animation-direction: alternate,alternate,alternate;
+		}
+        */
+       /* @keyframes changeShape{
+        	from{
+        		border-radius: 0%;
+        	}
+
+        	to{
+        		border-radius: 50%;
+        	}
+        } 
+        	
+		@keyframes rotate{
+			from{
+               transform: rotate(0deg);
+			}
+
+			to{
+               transform: rotate(360deg);
+			}
+		}
+
+		@keyframes reduceSize{
+			from{
+               height: 200px;
+               width: 200px;
+		     }
+
+	        to{
+               height: 100px;
+               width: 100px;
+			}
+		}*/
+
+		.one{
+			height: 155px;
+            width: 155px;
+			top: 40%;
+			left: 40%;
+            background-color: orange;
+            margin: 16%;
+		}
+
+		.two{
+		    height: 155px;
+			width: 155px;
+			top: 40%;
+			left: 40%;
+            background-color: aquamarine;
+            margin-left: 16%;
+		}
+	</style>
+</head>
+<body>
+	<!--animation through Animation.css library-->
+  <div class="one animate__animated animate__bounce animate__infinite"></div>
+  <div class="two animate__animated animate__bounce animate__infinite"></div>
+</body>
+</html>
